@@ -369,7 +369,7 @@ ul{
 
 
 .divCanvas{
-    width:780px;
+    width:49%;
     height: 100%;
     display:flex;
     position: relative;
@@ -382,7 +382,7 @@ ul{
 }
 
 .divCanvas1{
-    width:780px;
+    width:49%;
     height: 100%;
     display:flex;
     position: relative;
