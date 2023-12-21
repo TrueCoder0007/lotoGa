@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styleMain001.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" />
+    <title>Dashboard</title>
+
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing:border-box;
+        }
+
+        body{
+            min-height:100vh;
+            scroll-behavior:smooth;
+            padding-top:90px;
+            background-color:#ededed;  
+        }
+
+        .logoMenuToggle{
+            background-color:white;
+            height:64px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .menuToggle{
+            width:3%;
+            background-color:black;
+        }
+
+        .deleteBtnLiToggle{
+            display:none;
+        }
+
+        .menuDashboardToggle{
+            width:96.97%;
+            margin-left:3.05%;
+            transition:300ms;
+        }
+    </style>
+
+</head>
+
+<body onload="myFunction()">
+
+
+            <div class="menu-dashboard">
+
+                    <div class="logo-menu">
+                        <img src="logo/lotoGa_loto.png">
+                    </div><br>
+
+                <ul class="menuDad">
+
+                    <div class="btn-tableauBord adjustMenu">
+
+                        <li class="delete-btn">
+                            <i class="fa-sharp fa-solid fa-house"></i>
+                            <span>Tableau de bord</span>
+                            <i class="fa-solid fa-angle-right btn-Menu"></i>
+                        </li>
+                        
+                    </div>
+
+                    <div class="btn-ticket">
+                        <li class="delete-btn">
+                            <i class="fa-solid fa-list"></i>
+                            <span>Tickets</span>
+                            <i class="fa-solid fa-angle-right btn-Menu"></i>
+                        </li>
+                        
+                    </div>
+                    <!--<div class="btn-monitoring"><i class="fa-brands fa-watchman-monitoring"></i><li>Monitoring</li></div>-->
+                    <div class="btn-utilisateur">
+                        
+                        <li class="delete-btn">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Utilisateurs</span>
+                            <i class="fa-solid fa-angle-right btn-Menu"></i>
+                        </li>
+                        
+                    </div>
+
+                    <div class="btn-rapport">
+                        
+                        <li class="delete-btn">
+                            <i class="fa-solid fa-scroll"></i>
+                            <span>Finances</span>
+                            <i class="fa-solid fa-angle-right btn-Menu"></i>
+                        </li>
+                        
+                    
+                </div>
+                    
+                    <div class="btn-paiement">
+                        
+                        <li class="delete-btn">
+                            <i class="fa-solid fa-money-bill-wave"></i>
+                            <span>Paiements</span> 
+                            <i class="fa-solid fa-angle-right btn-Menu"></i>
+                        </li>
+                   
+        
+                </div>
+                    
+                    <div class="btn-gestionProduit">
+                        
+                            <li class="delete-btn">
+                                <i class="fa-sharp fa-solid fa-circle-nodes"></i>
+                                <span>Produits</span>
+                                <i class="fa-solid fa-angle-right btn-Menu"></i>
+                            </li>
+                        
+                    </div>
+
+                    <div class="btn-agent">
+                        
+                            <li class="delete-btn">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span>Agents</span>
+                                <i class="fa-solid fa-angle-right btn-Menu"></i>
+                            </li>
+                        
+                    </div>
+
+                    <div class="btn-resultat">
+                        
+                            <li class="delete-btn">
+                                <i class="fa-solid fa-square-poll-vertical"></i>
+                                <span>Résultats</span>
+                                <i class="fa-solid fa-angle-right btn-Menu"></i>
+                            </li>
+                             
+                        
+                    </div>
+
+                    <div class="btn-comptePrepaye">
+                        <li class="delete-btn">
+                            <i class="fa-solid fa-comment-dollar"></i>
+                            <span>Compte Prépayé</span>
+                            <i class="fa-solid fa-angle-right btn-Menu"></i>
+                        </li>
+                        
+                    </div>
+
+                </ul>
+
+            </div>
+    
+    
+
+        
+        <div class="div-dashboard">
+
+            <!--<div class="panel-dashboard">-->
+
+                <header class="div-menu">
+
+                    <div class="logoMedia">
+                        <img src="logo/lotoGa_loto.png">
+                    </div>
+
+                    <i class="fa-solid fa-bars icon-menu"></i>
+
+                        <div class="div-icon-user">
+                           
+                           <img src="logo/photo-profil.jpg">
+                       
+                           <ul>
+                                <li>Alexander</li>
+                            </ul>
+                        </div>
+
+                        <!--<i class="fa-solid fa-bars" id="iconMedia"></i>-->
+
+                </header>
+                
+                <div class="panel-tableauBord">
+
+                    <div class="Divtext-TableauBord">
+                        <h2>TABLEAU BORD</h2>
+                    </div>
+
+                    <div class="divCard">
+
+                        <div class="balance-card">
+                            <div class="text-balance">
+                                <h2>$45000</h2><br>
+                                <p>BALANCE TOTALE</p>
+                            </div>
+
+                            <i class="fa-solid fa-sack-dollar"></i>
+                        </div>
+
+                        <div class="utilisateur-card">
+                            <div class="text-balance">
+                                <h2>50</h2><br>
+                                <p>UTILISATEUR</p>
+                            </div>
+
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+
+                        <div class="prepaye-card">
+                            <div class="text-balance">
+                                <h3>30</h3><br>
+                                <p>COMPTE PRÉPAYÉ</p>
+                            </div>
+
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <div class="profit-card">
+                            <div class="text-balance">
+                                <h3>$12000</h3><br>
+                                <p>PROFIT</p>
+                            </div>
+
+                            <i class="fa-solid fa-dollar-sign"></i>
+                        </div>
+
+                    </div>
+
+                    <!--------------------------------------DONE DIV CARD-------------------------------------------------------------------------->
+
+                    <div class="divGraph">
+
+                        
+                        <div class="divCanvas">
+                            <canvas id="barCanvas"></canvas>
+                        </div>
+        
+                        <div class="divCanvas1">
+                            <canvas id="barCanvas1"></canvas>
+                        </div>
+
+                    </div>
+
+                    <!---------------------------------------DONE DIV GRAPH-------------------------------------------------------------------------->
+                    <div class="divTableau">
+
+                        <div class="tableau">
+                            <table>
+                                <caption>Liste des Clients</caption>
+                                <tr>
+                                    <th>Entreprise</th>
+                                    <th>Adresse</th>
+                                    <th>Nom d'Utilisateur</th>
+                                    <th>Tickets</th>
+                                    <th>Prix</th>
+                                    <th>Ventes Tot.</th>
+                                    <th>Net</th>
+                                    <th>Action</th>
+                                </tr>
+                                <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Cap</td>
+                                    <td>John</td>
+                                    <td>5</td>
+                                    <td>500</td>
+                                    <td>2500</td>
+                                    <td>800</td>
+                                    <td>
+                                        <a href="#">
+                                            <i class="fa-solid fa-pen btn-actualisation"></i>
+                                            <i class="fa-solid fa-trash btn-delete"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Centro comercial Moctezuma</td>
+                                    <td>PauP</td>
+                                    <td>Yves</td>
+                                    <td>5</td>
+                                    <td>500</td>
+                                    <td>2500</td>
+                                    <td>800</td>
+                                    <td>
+                                        <a href="#">
+                                            <i class="fa-solid fa-pen btn-actualisation"></i>
+                                            <i class="fa-solid fa-trash btn-delete"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ernst Handel</td>
+                                    <td>PauP</td>
+                                    <td>Yvette</td>
+                                    <td>5</td>
+                                    <td>500</td>
+                                    <td>2500</td>
+                                    <td>800</td>
+                                    <td>
+                                        <a href="#">
+                                            <i class="fa-solid fa-pen btn-actualisation"></i>
+                                            <i class="fa-solid fa-trash btn-delete"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Island Trading</td>
+                                    <td>André</td>
+                                    <td>Artibonite</td>
+                                    <td>5</td>
+                                    <td>500</td>
+                                    <td>2500</td>
+                                    <td>800</td>
+                                    <td>
+                                        <a href="#">
+                                            <i class="fa-solid fa-pen btn-actualisation"></i>
+                                            <i class="fa-solid fa-trash btn-delete"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Laughing Bacchus Winecellars</td>
+                                    <td>Cayes</td>
+                                    <td>Paul</td>
+                                    <td>5</td>
+                                    <td>500</td>
+                                    <td>2500</td>
+                                    <td>800</td>
+                                    <td>
+                                        <a href="#">
+                                            <i class="fa-solid fa-pen btn-actualisation"></i>
+                                            <i class="fa-solid fa-trash btn-delete"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Magazzini Alimentari Riuniti</td>
+                                    <td>Jérémie</td>
+                                    <td>Etienne</td>
+                                    <td>5</td>
+                                    <td>500</td>
+                                    <td>2500</td>
+                                    <td>800</td>
+                                    <td>
+                                        <a href="#">
+                                            <i class="fa-solid fa-pen btn-actualisation"></i>
+                                            <i class="fa-solid fa-trash btn-delete"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                            <div class="tableauGraph"> 
+                                <canvas id="barCanvas2"></canvas>
+                            </div>
+                           
+            
+                    </div>
+
+                    
+
+                </div>
+
+
+
+
+            <!------------------------------------------------------------PANEL-TICKET----------------------------------------------------------------->
+
+                <div class="panel-ticket"></div>
+
+
+
+        <!--------------------------------------------------------------PANEL GESTION DES UTILISATEURS--------------------------------------------------------->
+
+                <div class="panel-utilisateur"></div>
+      
+
+         <!-----------------------------------------------------------PANEL RAPPORTS FINANCIERS------------------------------------------------------------------------>
+               
+                <div class="panel-RapportFinancier"></div>
+
+
+         <!----------------------------------------------------------------PANEL PAIEMENT-------------------------------------------------->   
+
+                <div class="panel-paiement"></div>
+
+         <!----------------------------------------------------------------PANEL GESTION DES PRODUITS-------------------------------------------------->         
+                <div class="panel-gestionProduit"></div>
+
+         <!----------------------------------------------------------------PANEL AGENT--------------------------------------------------> 
+                <div class="panel-agent"></div>
+         <!----------------------------------------------------------------PANEL RESULTAT--------------------------------------------------> 
+                <div class="panel-resultat"></div>
+         <!----------------------------------------------------------------PANEL COMPTE PREPAYE--------------------------------------------------> 
+                <div class="panel-comptePrepaye"></div>
+                
+
+    </div>
+
+</body>
+
+<script src="jquery-3.7.1.min.js"></script>
+<script src="main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+
+<script>
+    const barCanvas = document.getElementById("barCanvas").getContext('2d');
+    const barCanvas1 = document.getElementById("barCanvas1").getContext('2d');
+    const barCanvas2 = document.getElementById("barCanvas2").getContext('2d');
+
+        const barChart = new Chart(barCanvas, {
+            type: "bar",
+            data: {
+                labels: ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"],
+                datasets: [{
+                    label: "Transaction Journalière",
+                    data: [100,150,190,260,50,399,350],
+                    backgroundColor: [
+                        "crimson",
+                        "lightgreen",
+                        "lightblue",
+                        "violet",
+                        "orange",
+                        "dimgray",
+                        "pink"
+                    ]
+                }]
+            }
+        });
+
+
+        const barChart1 = new Chart(barCanvas1, {
+            type: "line",
+            data: {
+                labels: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+                datasets: [{
+                    label: "Transaction Mensuelle",
+                    data: [100,150,190,260,5,80,600,354,82,230,70,535],
+                    backgroundColor: [
+                        "crimson",
+                        "lightgreen",
+                        "lightblue",
+                        "violet",
+                        "orange",
+                        "dimgray",
+                        "pink"
+                    ]
+                }]
+            }
+        });
+
+
+        const barChart2 = new Chart(barCanvas2, {
+            type: "pie",
+            data: {
+                labels: ["PauP", "Cap", "Cayes", "Jacmel"],
+                datasets: [{
+                    label: "Transaction Mensuelle",
+                    data: [100,150,190,260],
+                    backgroundColor: [
+                        "crimson",
+                        "lightgreen",
+                        "lightblue",
+                        "violet"
+                    ]
+                }]
+            }
+        });
+</script>
+
+
+</html>
